@@ -1,4 +1,4 @@
-connection: "looker-private-demo"
+connection: "my-bq"
 label: " eCommerce"
 include: "/queries/queries*.view" # includes all queries refinements
 include: "/views/**/*.view" # include all the views
@@ -13,7 +13,7 @@ include: "/dashboards/*.dashboard.lookml" # include all the views
 # }
 
 datagroup: ecommerce_etl_modified {
-  sql_trigger: SELECT MAX(DATE(created_at)) FROM `looker-private-demo.ecomm.events` ;;
+  sql_trigger: SELECT MAX(DATE(created_at)) FROM `pawan-argolis-demo.ecomm.events` ;;
   max_cache_age: "24 hours"
 }
 
